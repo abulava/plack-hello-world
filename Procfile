@@ -1,1 +1,1 @@
-web: local/bin/plackup -MPlack::App::CGIBin -e 'Plack::App::CGIBin->new("/cgi-bin/" => "./cgi-bin")->to_app'
+web: perl -Mlib=$PWD/local/lib/perl5 ./local/bin/starman --preload-app --port $PORT
