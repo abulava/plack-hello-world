@@ -12,6 +12,7 @@ sub mount_static_file {
 }
 
 builder {
+  enable "Plack::Middleware::AccessLog", format => "combined";
   enable "Plack::Middleware::ConditionalGET";
 
   mount "/cgi-bin" => $app;
